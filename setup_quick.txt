@@ -1,0 +1,30 @@
+::: instructions :::
+
+install node.js & npm for ur platform
+
+here's what i did, hopefully it works for u:
+
+npm install
+npm audit fix
+npm run start-local [it errors out]
+cd ./node_modules/electron/dist
+sudo chown root ./chrome-sandbox
+sudo chmod 4755 ./chrome-sandbox
+cd ../../..
+npm run start-local [should work, opening program and browser control API]
+
+during testing it initially logged me into the web terminal as 'admin' and prompted for the un/pw and let me enter 'sleep,' 'sleep', now it shows 'operator' and doesn't prompt. idk. maybe i screwed something up a little or made a simple oversight or something, idk. at any rate "It works on my machine" is all i can really say, more or less. apologies for all flaws and deficiencies
+
+good luck anyone who uses this!
+
+-sp3ctrum-lab:[m3m0rygh0st]
+
+:::::::::
+
+
+
+
+
+
+
+

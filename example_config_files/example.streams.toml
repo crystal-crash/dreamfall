@@ -1,0 +1,11 @@
+[[streams]]
+city   = "Varied"
+label  = "yo"
+link   = "enter url here"
+notes  = "this is a text string slogan!"
+source = "enter domain here!"
+
+[[streams]]
+kind  = "web"
+label = "panopticon"
+link  = "enter url here!"
