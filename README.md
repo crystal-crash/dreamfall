@@ -1,14 +1,14 @@
-# Streamwall
+# dreamfall
 
 :construction: Early WIP release! :construction:
 
-Streamwall makes it easy to compose multiple livestreams into a mosaic, with source attributions and audio control.
+dreamfall makes it easy to compose multiple livestreams into a mosaic, with source attributions and audio control.
 
 ![Screenshot of Streamwall displaying a grid of streams](screenshot.png)
 
 ## How it works
 
-Under the hood, think of Streamwall as a specialized web browser for mosaicing video streams. It uses [Electron](https://www.electronjs.org) to create a grid of web browser views, loading the specified webpages into them. Once the page loads, Streamwall finds the `<video>` tag and reformats the page so that the video fills the space. This works for a wide variety of web pages without specialized scrapers.
+Under the hood, think of dreamfall as a specialized web browser for mosaicing video streams. It uses [Electron](https://www.electronjs.org) to create a grid of web browser views, loading the specified webpages into them. Once the page loads, dreamfall finds the `<video>` tag and reformats the page so that the video fills the space. This works for a wide variety of web pages without specialized scrapers.
 
 ## Prerequisites
 
@@ -16,22 +16,22 @@ Under the hood, think of Streamwall as a specialized web browser for mosaicing v
 
 ## Setup
 
-1. Download streamwall. You can use git, or download and unzip https://github.com/chromakode/streamwall/archive/main.zip
-2. Open the streamwall directory in a console
+1. Download dreamwall. You can use git, or download and unzip https://github.com/chromakode/streamwall/archive/main.zip
+2. Open the dreamwall directory in a console
    - In Windows, the LTS install from nodejs.org will install a program called "Node.js command prompt." Open this program; Command Prompt and Powershell may not have the correct environment variables. Once it's open, change directories to where you extracted the file, e.g., `> cd c:\Users\<myname>\Downloads\streamwall\`
    - On MacOS, you should be able to use the default system terminal or other terminals like iTerm2 as long as a sufficient version of Node is installed. With that open, change directories to where you extracted the file, e.g., `> cd ~/Downloads/streamwall`
 3. Run the following command: `npm install`
 
 ## To Start Streamwall
 
-1. Using a terminal/console window as described above, go to the streamwall directory, and run `npm run start-local`
-2. This will open a black stream window and a browser window. The default username and password are 'woke'.
-3. Use the browser window to load or control streams. The initial list will be populated from https://woke.net/#streams
+1. Using a terminal/console window as described above, go to the dreamwall directory, and run `npm run start-local`
+2. This will open a black stream window and a browser window. The default username and password are 'sleep'.
+3. Use the browser window to load or control streams. The initial list not be populated.
 4. If you enter the same stream code in multiple cells, it will merge them together for a larger stream.
 
 ## Configuration
 
-Streamwall has a growing number of configuration options. To get a summary run:
+dreamfall has a growing number of configuration options. To get a summary run:
 
 ```
 npm start -- --help
@@ -40,14 +40,14 @@ npm start -- --help
 For long-term installations, it's recommended to put your options into a configuration file. To use a config file, run:
 
 ```
-npm start -- --config="../streamwall.toml"
+npm start -- --config="../dreamwall.toml"
 ```
 
 See `example.config.toml` for an example.
 
 ## Data sources
 
-Streamwall can load stream data from both JSON APIs and TOML files. Data sources can be specified in a config file (see `example.config.toml` for an example) or the command line:
+dreamwall can load stream data from both JSON APIs and TOML files. Data sources can be specified in a config file (see `example.config.toml` for an example) or the command line:
 
 ```
 npm start -- --data.json-url="https://your-site/api/streams.json" --data.toml-file="./streams.toml"
@@ -64,8 +64,8 @@ The following hotkeys are available with the "control" webpage focused:
 - **alt+[1...9]**: Listen to the numbered stream
 - **alt+shift+[1...9]**: Toggle blur on the numbered stream
 - **alt+s**: Select the currently focused stream box to be swapped
-- **alt+c**: Activate [Streamdelay](https://github.com/chromakode/streamdelay) censor mode
-- **alt+shift+c**: Deactivate [Streamdelay](https://github.com/chromakode/streamdelay) censor mode
+- **alt+c**: Activate [Streamdelay] censor mode
+- **alt+shift+c**: Deactivate [Streamdelay]censor mode
 
 ## Troubleshooting
 
@@ -73,9 +73,9 @@ The following hotkeys are available with the "control" webpage focused:
 
 We've observed this occur in cases where file corruption is an issue. The fix has been to clear the npm cache, remove the streamwall directory, and start from scratch.
 
-### The Streamwall Electron window only fits 2.5 tiles wide
+### The dreamfall Electron window only fits 2.5 tiles wide
 
-Streamwall in its default settings needs enough screen space to display a 1920x1080 (1080p) window, with room for the titlebar. You can configure Streamwall to open a smaller window:
+dreamfalll in its default settings needs enough screen space to display a 1920x1080 (1080p) window, with room for the titlebar. You can configure dreamfall to open a smaller window:
 
 ```
 npm start -- --window.width=1024 --window.height=768
