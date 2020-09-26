@@ -40,14 +40,14 @@ npm start -- --help
 For long-term installations, it's recommended to put your options into a configuration file. To use a config file, run:
 
 ```
-npm start -- --config="../dreamwall.toml"
+npm start -- --config="../dreamfall.toml"
 ```
 
 See `example.config.toml` for an example.
 
 ## Data sources
 
-dreamwall can load stream data from both JSON APIs and TOML files. Data sources can be specified in a config file (see `example.config.toml` for an example) or the command line:
+dreamfall can load stream data from both JSON APIs and TOML files. Data sources can be specified in a config file (see `example.config.toml` for an example) or the command line:
 
 ```
 npm start -- --data.json-url="https://your-site/api/streams.json" --data.toml-file="./streams.toml"
@@ -55,7 +55,7 @@ npm start -- --data.json-url="https://your-site/api/streams.json" --data.toml-fi
 
 ## Twitch bot
 
-dreamwall can announce the name and URL of streams to your Twitch channel as you focus their audio. Use [twitchtokengenerator.com](https://twitchtokengenerator.com/?scope=chat:read+chat:edit) to generate an OAuth token. See `example.config.toml` for all available options.
+dreamfall can announce the name and URL of streams to your Twitch channel as you focus their audio. Use [twitchtokengenerator.com](https://twitchtokengenerator.com/?scope=chat:read+chat:edit) to generate an OAuth token. See `example.config.toml` for all available options.
 
 ## Hotkeys
 
